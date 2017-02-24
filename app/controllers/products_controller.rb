@@ -17,5 +17,11 @@ class ProductsController < ApplicationController
     redirect_to :back
   end
 
+  def upvote
+  @product = Product.find(params[:id])
+  @product.upvote_by current_user
+  redirect_to :back
+  end
+
 
 end
