@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   end
 
   devise_for :users
-  root "products#index"
+
 
   resources :products do
     member do
@@ -29,4 +29,9 @@ Rails.application.routes.draw do
    namespace :account do
      resources :orders
    end
+
+   resources :welcome do
+     
+   end
+   root "welcome#index"
 end
