@@ -31,7 +31,8 @@ Rails.application.routes.draw do
    end
 
    resources :welcome do
-     
+
    end
    root "welcome#index"
+   get '/about',to: 'pages#about'
 end
